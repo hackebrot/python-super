@@ -1,0 +1,39 @@
+[bug]
+color = "ffeb95"
+name = "bug"
+description = "Bugs and problems with the code examples"
+
+["code quality"]
+color = "c792ea"
+name = "code quality"
+description = "Tasks related to linting, coding style, type checks"
+
+[discussion]
+color = "21c7a8"
+name = "discussion"
+description = "Issues for discussing the code examples"
+
+["do not merge"]
+color = "ef5350"
+name = "do not merge"
+description = "Pull requests which must not be merged"
+
+[enhancement]
+color = "82aaff"
+name = "enhancement"
+description = "Enhancements for the code examples"
+
+[misc]
+color = "ecc48d"
+name = "misc"
+description = "Tasks that don't fit any of the other categories"
+
+[project]
+color = "d6deeb"
+name = "project"
+description = "Tasks related to managing this project"
+
+[question]
+color = "21c7a8"
+name = "question"
+description = "Questions about the code examples"
