@@ -26,10 +26,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
-      - name: Run examples
-        run: |
-          python examples/01_defining_classes.py
-          python examples/02_extending_classes.py
-          python examples/03_overriding_class_attributes.py
-          python examples/04_injecting_functionality.py
-          python examples/05_debugging_mro.py
+      - name: Run example 01
+        run: python examples/01_defining_classes.py
+      - name: Run example 02
+        run: python examples/02_extending_classes.py
+      - name: Run example 03
+        run: python examples/03_overriding_class_attributes.py
+      - name: Run example 04
+        run: python examples/04_injecting_functionality.py
+      - name: Run example 05
+        run: python examples/05_debugging_mro.py
