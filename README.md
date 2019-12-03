@@ -2,9 +2,12 @@
 
 Code examples for teaching Python's super. 🦸‍♀️
 
-The examples use Python 3.8 and code is formatted with black.
+## Requirements
 
-# Community
+The examples require Python 3.6 or newer and the packages in
+`requirements.txt`.
+
+## Community
 
 Please note that **python-super** is released with a [Contributor Code of
 Conduct][code of conduct]. By participating in this project you agree to
