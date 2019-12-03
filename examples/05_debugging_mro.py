@@ -12,9 +12,9 @@ import wrapt
 @wrapt.decorator
 def log_call(wrapped_method, instance, args, kwargs):
     """Print when the decorated method is called."""
-    classname = instance.__class__.__name__
-    qualname = wrapped_method.__qualname__
-    print(f"Calling method {qualname} for {classname}.")
+    method_name = wrapped_method.__qualname__
+    class_name = instance.__class__.__qualname__
+    print(f"Calling method {method_name} for {class_name}.")
     return wrapped_method(*args, **kwargs)
 
 
@@ -22,9 +22,10 @@ class LogMethods(type):
     """Metaclass that decorates methods with log_call."""
 
     def __new__(cls, name, bases, attrs, **kwargs):
-        for name, value in attrs.items():
-            if callable(value):
-                attrs[name] = log_call(value)
+        for attr, value in attrs.items():
+            if not callable(value):
+                continue
+            attrs[attr] = log_call(value)
         return super().__new__(cls, name, bases, attrs, **kwargs)
 
 
