@@ -10,13 +10,13 @@ class Person:
     def __repr__(self) -> str:
         return f"{self.name}"
 
-    def go_to_the_movies(self):
+    def go_to_the_movies(self) -> None:
         print(f"{self} goes to the movies. 🍿")
 
-    def go_hiking(self):
+    def go_hiking(self) -> None:
         print(f"{self} goes hiking. ⛰")
 
-    def build_a_robot(self):
+    def build_a_robot(self) -> None:
         print(f"{self} builds a robot. 🤖")
 
 

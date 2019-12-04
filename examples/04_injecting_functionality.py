@@ -16,21 +16,21 @@ class Person:
     def __repr__(self) -> str:
         return f"{self.name}"
 
-    def stay_hydrated(self):
+    def stay_hydrated(self) -> None:
         print(f"{self} drinks some water. 🚰")
 
-    def go_to_the_movies(self):
+    def go_to_the_movies(self) -> None:
         print(f"{self} goes to the movies. 🍿")
 
-    def go_hiking(self):
+    def go_hiking(self) -> None:
         print(f"{self} goes hiking. ⛰")
 
-    def build_a_robot(self):
+    def build_a_robot(self) -> None:
         print(f"{self} builds a robot. 🤖")
 
 
 class TeaPerson(Person):
-    def stay_hydrated(self):
+    def stay_hydrated(self) -> None:
         print(f"{self} drinks tea. 🍵")
 
 
@@ -62,13 +62,13 @@ class TeamMember(Person):
         return f"{self.expertise} {default}"
 
     @contextlib.contextmanager
-    def commute(self):
+    def commute(self) -> typing.Generator:
         """Commute to the office and back."""
         print(f"{self} commutes to the office. 🏢")
         yield
         print(f"{self} commutes home. 🏡")
 
-    def work_on_project(self, project):
+    def work_on_project(self, project) -> None:
         """Start working on the given project."""
         with self.commute():
             print(f"{self} is now working on {project}. 📋")
@@ -106,7 +106,7 @@ class RemoteTeamMember(TeamMember):
         super().__init__(**kwargs)
 
     @contextlib.contextmanager
-    def commute(self):
+    def commute(self) -> typing.Generator:
         """Stay at home or commute to the workplace and back."""
 
         if self.workplace == "home":

@@ -16,16 +16,16 @@ class Person:
     def __repr__(self) -> str:
         return f"{self.name}"
 
-    def stay_hydrated(self):
+    def stay_hydrated(self) -> None:
         print(f"{self} drinks some water. 🚰")
 
-    def go_to_the_movies(self):
+    def go_to_the_movies(self) -> None:
         print(f"{self} goes to the movies. 🍿")
 
-    def go_hiking(self):
+    def go_hiking(self) -> None:
         print(f"{self} goes hiking. ⛰")
 
-    def build_a_robot(self):
+    def build_a_robot(self) -> None:
         print(f"{self} builds a robot. 🤖")
 
 
@@ -56,7 +56,7 @@ class TeamMember(Person):
 
         return f"{self.expertise} {default}"
 
-    def work_on_project(self, project: Project):
+    def work_on_project(self, project: Project) -> None:
         """Start working on the given project."""
         print(f"{self} is now working on {project}. 📋")
         self.stay_hydrated()
