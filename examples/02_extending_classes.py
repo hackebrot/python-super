@@ -10,7 +10,7 @@ class Person:
     def __init__(self, name: str):
         self.name = name
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:
         return f"{self.name}"
 
     def go_to_the_movies(self) -> None:
@@ -30,7 +30,7 @@ class Project:
         self.board_name = board_name
         self.description = description
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:
         return f"Project '{self.board_name}'"
 
 

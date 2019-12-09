@@ -35,7 +35,7 @@ class Person(metaclass=LogMethods):
     def __init__(self, *, name: str, **kwargs: typing.Any):
         self.name = name
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:
         return f"{self.name}"
 
     def stay_hydrated(self) -> None:
@@ -63,7 +63,7 @@ class Project:
         self.board_name = board_name
         self.description = description
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:
         return f"Project '{self.board_name}'"
 
 
@@ -74,9 +74,9 @@ class TeamMember(Person):
 
     expertise: typing.Optional[str] = None
 
-    def __repr__(self) -> str:
-        # Get default repr from super class
-        default = super().__repr__()
+    def __str__(self) -> str:
+        # Get default string representation from the super class
+        default = super().__str__()
 
         if self.expertise is None:
             return f"{default}"
