@@ -106,6 +106,8 @@ class OperationsEngineer(TeamMember):
 
 
 class RemoteTeamMember(TeamMember):
+    """Team member who works remotely."""
+
     def __init__(self, *, workplace: str, **kwargs: typing.Any):
         self.workplace = workplace
         # Forward kwargs to super class
