@@ -132,7 +132,7 @@ class RemoteTeamMember(TeamMember):
         super().__init__(**kwargs)
 
     @contextlib.contextmanager
-    def commute(self):
+    def commute(self) -> typing.Generator:
         """Stay at home or commute to the workplace and back."""
 
         if self.workplace == "home":
