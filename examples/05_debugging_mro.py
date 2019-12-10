@@ -56,6 +56,8 @@ class Person(metaclass=LogMethods):
 
 
 class TeaPerson(Person):
+    """A person who prefers tea over water."""
+
     def stay_hydrated(self) -> None:
         print(f"{self} drinks tea. 🍵")
 
